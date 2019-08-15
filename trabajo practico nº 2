@@ -1,1 +1,40 @@
-# Lab-comp-II
+package com.company;
+
+import javax.swing.*;
+import java.net.SocketOption;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        double promedio=0;
+        int c1 = 0, c2= 0, c3 = 0,c4 =0, acu =0;
+        int[] valor= new int[10];
+        for (int i = 0; i < 10; i++) {
+
+            valor[i] = Integer.parseInt(JOptionPane.showInputDialog("ingrese un valor"));
+        
+            if (valor[i] > 0) {
+                c1++;
+            }else {
+                if (valor[i] < 0) {
+                    c2++;
+                } else {
+                    c3++;
+                }
+            }
+            }
+        System.out.println ("números negativos son: " + c1);
+        System.out.println("numeros positivos son: " + c2);
+        System.out.println("valores iguales a 0 son :" + c3);
+        for (int i = 0; i < 10; i++){
+            if (i%2==0){
+                c4++;
+                acu = acu + valor[i];
+            }
+        }
+        promedio= acu / c4;
+        System.out.print(" "+ promedio );
+    }
+
+}
