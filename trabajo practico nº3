@@ -1,1 +1,144 @@
 # Lab-comp-II
+ejercicion 1
+package com.company;
+
+class Math {
+
+    public static void main(String[] args) {
+        int[] numeros = new int[100];
+
+        int elemento;
+        for(elemento = 0; elemento < 100 ; ++elemento) {
+            numeros[elemento] = (int)(java.lang.Math.random() * 10.0D);
+
+        }
+
+        int[] var1 = numeros;
+        int var4 = numeros.length;
+
+        for(int var3 = 0; var3 < var4; ++var3) {
+            elemento = var1[var3];
+            System.out.print(elemento + ", ");
+        }
+
+    }
+
+//ejercicio 2
+        int [][] numeros = new int[3][3];
+        for(int i = 0; i<3;i++) {
+            for(int j =0; j<3;j++) {
+                numeros[i][j] = (int)(Math.random()*100);
+                System.out.print(numeros);
+            }
+            System.out.print(
+        }
+
+        for(int i[]:numeros) {
+            for(int j:i) {
+                System.out.print(j+" ");
+            }
+            System.out.println("");
+        }
+
+    }
+  //ejercicio 3
+  
+  
+  String [][] personas = new String[3][3];
+		Scanner sc = new Scanner(System.in);
+		
+		for(int columna = 0; columna < 3; columna++) {
+			System.out.println("NOMBRE: ");
+			personas[columna][0]=sc.next();
+			System.out.println("DNI: ");
+			personas[columna][1]=sc.next();
+			System.out.println("EDAD:");
+			personas[columna][2]=sc.next();
+		}
+		
+		for(String columna[]:personas) {
+			System.out.println("NOMBRE:"+columna[0]);
+			System.out.println("DNI:"+columna[1]);
+			System.out.println("EDAD:"+columna[2]);
+		}
+//ejercicio 4
+int [][] matriz = new int [3][3];
+		
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				matriz [i][j]=(int)(Math.random()*10);
+			}
+		}
+		
+		System.out.println("MATRIZ ORIGINAL \n");
+		
+		for(int i[]:matriz) {
+			for(int j:i) {
+				System.out.print(j+" ");
+			}
+			System.out.println("");
+		}
+		
+			
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				for(int x=0; x<3; x++) {
+					for(int y=0; y<3; y++) {
+						if(matriz[i][j] < matriz [x][y]) {
+							int temp = matriz[i][j];
+							matriz[i][j] = matriz[x][y];
+							matriz[x][y] = temp; 
+						}
+					}
+				}
+			}
+		}
+		
+		System.out.println("\n MATRIZ ORDENADA \n");
+		
+		for(int i[]:matriz) {
+			for(int j:i) {
+				System.out.print(j+" ");
+			}
+			System.out.println("");
+		}
+    //ejercicio 5
+    int [][] matriz = new int [3][3];
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				System.out.print("( "+i+", "+j+") ");
+				matriz [i][j]=sc.nextInt();
+			}
+			System.out.print("");
+		}
+				
+		//Ordenamiento de la matriz	utilizando el metodo burbuja
+		
+		for(int i=0; i<3; i++) {
+			for(int j=0; j<3; j++) {
+				for(int x=0; x<3; x++) {
+					for(int y=0; y<3; y++) {
+						if(matriz[i][j] < matriz [x][y]) {
+							int temp = matriz[i][j];
+							matriz[i][j] = matriz[x][y];
+							matriz[x][y] = temp; 
+						}
+					}
+				}
+			}
+		}
+		
+		System.out.println("\n MATRIZ ORDENADA \n");
+		
+		for(int i[]:matriz) {
+			for(int j:i) {
+				System.out.print(j+" ");
+			}
+			System.out.println("");
+		}
+
+}
