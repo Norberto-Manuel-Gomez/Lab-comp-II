@@ -1,1 +1,51 @@
 # Lab-comp-II
+package cuentacorriente;
+
+public interface bancoprincipal {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		CuentaCorriente cta1 = new CuentaCorriente("Facundo", 100);
+		CuentaCorriente cta2 = new CuentaCorriente("Carlos", 200);
+		
+		
+		cta1.restar(50);
+		cta2.sumar(50);
+		
+		System.out.print(cta1.getInfo()+"\n");
+		System.out.print(cta2.getInfo());
+		
+		
+
+	}
+}
+-------------------------------------------------------------------------
+//en otra clase
+package cuentacorriente;
+
+public class CuentaCorriente {
+	String nombre;
+	double saldo;
+	int nroCuenta;
+	
+	public CuentaCorriente(String nombre, double saldo) {
+		this.nombre = nombre;
+		this.saldo = saldo;
+		this.nroCuenta = (int)(Math.random()*10);		
+	}
+	
+	public String getInfo() {
+		
+		return ("Nombre: "+this.nombre+"\n"+
+				"Saldo: $"+this.saldo);
+	}
+	
+	public void restar(double monto) {
+		this.saldo = this.saldo - monto;
+	}
+	
+	public void sumar(double monto) {
+		this.saldo = this.saldo + monto;
+	}
+	
+}
