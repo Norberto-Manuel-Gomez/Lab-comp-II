@@ -1,0 +1,24 @@
+package empresaEmpleados;
+
+public class UsoEmpleados {
+
+	public static void main(String[] args) {
+
+		Empleados[] Empleados = new Empleados[5];
+		
+		Empleados[0] = new Empleados("Gatón",48000);
+		Empleados[1] = new Empleados("Carlitos",48000);
+		Empleados[2] = new Empleados("Lucía",48000);
+		Empleados[3] = new Empleados("Rita",48000);
+		
+		
+		
+		Empleados[4]=new Jefes("Victor",50000);
+		
+		for(Empleados objeto:Empleados) {
+			
+			System.out.println(objeto.getDatosEmpleado()+"\nSALARIO: "+objeto.getSueldo());
+		}
+		
+	}
+	}
