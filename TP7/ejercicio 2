@@ -1,0 +1,27 @@
+package Solonumeros;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class ejercicio2 {
+
+	public static void main(String[] args) {
+		
+			pedirDatos();
+				}
+	
+	
+	static void pedirDatos() throws Errodevalor{
+		Scanner teclado = new Scanner(System.in);
+		System.out.println("igrese un valor de 1-100");
+		int valor = teclado.nextInt();
+		if (valor < 1 || valor>100) {
+			//colocamos nuestra propia excepción
+			Errodevalor miExcepcion = new Errodevalor("Edad negativa es imposible"); //tambien se puede ocupar el constructor sin parametro
+			throw miExcepcion;
+			}
+		System.out.println("su valor es correcto");
+		teclado.close();
+	}
+	
+}
