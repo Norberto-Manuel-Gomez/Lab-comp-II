@@ -1,0 +1,24 @@
+package TP9;
+
+public class NumeroNatural extends Numero {
+
+    private int numero;
+
+    public NumeroNatural(String numero) {
+
+        this.setNumero(Integer.parseInt(numero));
+    }
+
+    @Override
+    public String getTipo() {
+        return "Natural";
+    }
+
+    public int getValor () {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+}
