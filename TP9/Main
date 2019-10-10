@@ -1,0 +1,49 @@
+package TP9;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner (System.in);
+
+        System.out.println("Cantidad de numeros a ingresar:");
+        int cant = scan.nextInt();
+        String ingreso = "";
+        String natural = "", complejoA = "", complejoB = "";
+
+        Numero[] numeros = new Numero[cant];
+
+        int i = 0;
+
+        do {
+
+            System.out.print("Tipo de numero a ingresar (natural/complejo) : ");
+            ingreso = scan.next();
+
+            if (ingreso.equals("natural")) {
+                System.out.print("Ingresar el numero natural: ");
+                natural = scan.next();
+                numeros[i] = new NumeroNatural(natural);
+                i++;
+
+            } else if (ingreso.equals("complejo")) {
+                System.out.print("Ingresar valor 'a': ");
+                complejoA = scan.next();
+                System.out.print("Ingresar valor 'b': ");
+                complejoB = scan.next();
+                numeros[i] = new NumeroComplejo(complejoA,complejoB);
+                i++;
+            } else {
+                System.out.println("Tipo invalido");
+            }
+
+
+        } while (!(ingreso.equals("f")) && (i < numeros.length));
+
+        System.out.println("Suma de naturales: "+UsoNumeros.sumaNaturales(numeros));
+
+    }
+
+}
