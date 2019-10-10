@@ -1,0 +1,16 @@
+package TP9;
+
+public class Numero {
+
+    public String getNumero () {
+        return null;
+    }
+    public int getValor () {
+        return 0;
+    }
+
+    public String getTipo () {
+        return null;
+    }
+
+}
