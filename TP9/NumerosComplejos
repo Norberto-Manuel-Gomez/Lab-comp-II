@@ -1,0 +1,41 @@
+package TP9;
+
+public class NumeroComplejo extends Numero{
+
+    private int parteReal;
+    private String parteImg;
+
+
+    public NumeroComplejo (String parteReal, String parteImg) {
+
+        this.setParteImg(parteImg);
+        this.setParteReal(Integer.parseInt(parteReal));
+    }
+
+    @Override
+    public String getTipo() {
+        return "Complejo";
+    }
+
+    public String getNumero () {
+
+        return "("+this.getParteReal()+","+this.getParteImg()+")";
+    }
+
+    public int getParteReal() {
+        return parteReal;
+    }
+
+    public void setParteReal(int parteReal) {
+        this.parteReal = parteReal;
+    }
+
+    public String getParteImg() {
+        return parteImg;
+    }
+
+    public void setParteImg(String parteImg) {
+        this.parteImg = parteImg;
+    }
+
+}
