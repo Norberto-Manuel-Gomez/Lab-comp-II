@@ -1,0 +1,23 @@
+package TFI01;
+
+public class Empleados extends Personas{
+	static double sueldo;
+	
+	 public Empleados(String nombre, int Edad, double sueldo) {
+		super (nombre, Edad);
+		this.sueldo = sueldo;
+	}
+	
+	
+	public double getSueldo() {
+		return sueldo;
+	}
+
+	public void setSueldo(double sueldo) {
+		this.sueldo = sueldo;
+	
+	}
+
+	
+
+}
