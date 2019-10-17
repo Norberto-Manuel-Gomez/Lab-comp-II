@@ -1,0 +1,11 @@
+package TFI01;
+
+public class Acomodador extends Empleados {
+
+	public Acomodador(String nombre, int Edad, double Sueldo) {
+		super (nombre, Edad, Sueldo);
+		
+	}
+	
+
+}
