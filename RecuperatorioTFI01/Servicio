@@ -1,0 +1,61 @@
+package RecuperatorioTFI01;
+
+import java.util.Scanner;
+
+import RecuperatorioTFI01.Automovil.LdPasajeros;
+import TFI01.Espectadores;
+
+public class Servicio implements ParaMostrar {
+
+	private static Object nombre;
+	private static Object dni;
+
+	public static void main(String[] args) {
+		
+	
+				
+			LdPasajeros[] ldPasajeros = new LdPasajeros[3];
+						
+		for(int i=0; i<=ldPasajeros.length-1; i++) {
+			
+			Scanner entrada = new Scanner(System.in);
+			
+			try {
+				
+				System.out.println("seleccione su chofer:");
+				String chofer = entrada.next();
+				
+				System.out.println("sececcione su veiculo:");
+				String veiculo = entrada.next();
+				
+				System.out.println("asignando chofer: "+chofer+" par veiculo: "+veiculo);
+				
+				try{
+				System.out.println("ingrese el recorrido de su veiculo");
+				System.out.println("direccion de origende:");
+				String origende = entrada.next();
+				System.out.println("direccion de desctino:");
+				String desctino = entrada.next();
+				
+				}catch (Exception e) {
+					
+					System.out.println("ERROR EN EL INGRESO DE DATOS");
+					break;
+				}
+				
+				
+				ldPasajeros[i] = new LdPasajeros (nombre, dni);
+	
+		} catch (Exception e) {
+			
+			System.out.println("LA LISTA DE PASAJEROS ES SUPERIOR A LA CAPACIDAD DEL VEHÍCULO");
+			break;
+		}
+		}
+	}
+	
+	public String getNombres() {
+		
+		return "Servicio";
+	} 
+}
