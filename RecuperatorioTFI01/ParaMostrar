@@ -1,0 +1,9 @@
+package RecuperatorioTFI01;
+
+public interface ParaMostrar {
+	
+	public abstract String getNombres();
+	
+	public abstract String toString();
+	
+}
