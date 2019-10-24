@@ -1,0 +1,100 @@
+package RecuperatorioTFI01;
+
+public class Vehículos implements ParaMostrar {
+	private String Origen; 
+	private String Destino; 
+	private String Chofer; 
+	private String Pasajeros; 
+	private int Matrícula; 
+	private String LdPasajeros;
+	public int CdPasajeros;
+	
+	public Vehículos(String ldPasajeros ,String origen, String destino, String chofer, String pasajeros, int matrícula, int cdPasajeros) {
+		
+		this.Origen = origen;
+		this.Destino = destino;
+		
+		this.Chofer = chofer;
+		this.Pasajeros = pasajeros;
+		this.LdPasajeros = ldPasajeros;
+		this.Matrícula = matrícula;
+		this.CdPasajeros = cdPasajeros;
+	}
+	class Origen extends Lugares (){
+		public Origen(String nombre, String dirección) {
+			super(nombre, dirección);
+		}
+		}
+	class Destino extends Lugares (){
+	
+		public Destino(String nombre, String dirección) {
+			super(nombre, dirección);
+		}
+		}
+  class Chofer extends Personas () {
+		
+	public Chofer(String nombre, int dni) {
+		super(nombre, dni);
+	}
+	}
+ class Pasajeros extends Personas(){
+	public Pasajeros(String nombre, int dni) {
+		super(nombre, dni);
+		
+	}
+ }
+	public String getOrigen() {
+		return Origen;
+	}
+
+	public void setOrigen(String origen) {
+		Origen = origen;
+	}
+
+	public String getDestino() {
+		return Destino;
+	}
+
+	public void setDestino(String destino) {
+		Destino = destino;
+	}
+
+	public String getChofer() {
+		return Chofer;
+	}
+
+	public void setChofer(String chofer) {
+		Chofer = chofer;
+	}
+
+	public String getLdPasajeros() {
+		return LdPasajeros;
+	}
+
+	public void setLdPasajeros(String ldPasajeros) {
+		LdPasajeros = ldPasajeros;
+	}
+
+	public int getMatrícula() {
+		return Matrícula;
+	}
+
+	public void setMatrícula(int matrícula) {
+		Matrícula = matrícula;
+	}
+
+	public int getCdPasajeros() {
+		return CdPasajeros;
+	}
+
+	public void setCdPasajeros(int cdPasajeros) {
+		CdPasajeros = cdPasajeros;
+	}
+
+	@Override
+	public String getNombres() {
+		
+		return "Vehículos";
+	} 
+
+}
