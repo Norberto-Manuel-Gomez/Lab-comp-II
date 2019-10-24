@@ -1,0 +1,33 @@
+package RecuperatorioTFI01;
+
+public class Lugares implements ParaMostrar {
+	private String Nombre;
+	private String Dirección;
+	
+	public Lugares(String nombre, String dirección) {
+		super();
+		Nombre = nombre;
+		Dirección = dirección;
+	}
+
+	public String getNombre() {
+		return Nombre;
+	}
+
+	public void setNombre(String nombre) {
+		Nombre = nombre;
+	}
+
+	public String getDirección() {
+		return Dirección;
+	}
+
+	public void setDirección(String dirección) {
+		Dirección = dirección;
+	}
+	
+	public String getNombres() {
+		// TODO Auto-generated method stub
+		return "Lugares";
+	} 
+}

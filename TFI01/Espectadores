@@ -1,0 +1,17 @@
+package TFI01;
+
+public class Espectadores extends Personas {
+
+	 public int edad;
+	 public int silla;
+	 public int fila;
+	 
+	public Espectadores(String nombre, int Edad) {
+		super(nombre, Edad);
+		
+	}
+	
+	public void setSala ( ){
+		
+	}
+}

@@ -1,0 +1,54 @@
+package RecuperatorioTFI01;
+
+import RecuperatorioTFI01.Automovil.LdPasajeros;
+
+
+public abstract class  Automovil implements ParaMostrar {
+	
+	public String verDatos(){
+		
+	}
+	
+	public String setChofer(){
+		Choferes chofer
+	}
+	
+	public String setDestino(){
+		Destinos :lugares;
+	}
+	class LdPasajeros  extends Personas {
+
+		public LdPasajeros(String nombre, int dni) {
+			super(nombre, dni);
+						
+		}
+
+	
+	public cargarPasajeros( Sting nombre, int dni ){
+		if 
+		nombre =nombre;
+		
+		
+	}
+	
+	
+	@Override
+		public String getNombres() {
+			
+			return "Automovil";
+		}
+	@Override
+	public String getTipo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return null;
+	} 
+	}
+		
+
+	}
+
