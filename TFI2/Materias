@@ -1,0 +1,81 @@
+package TFI02;
+
+import java.util.Iterator;
+import java.util.Set;
+
+public class Materias implements Informacion {
+ private String nombre;
+ private Profesor titular;
+ Set<Estudiante> colecciondeEstudiantes1;
+ 
+public Materias(String nombre, Profesor titular ) {
+	
+	this.nombre = nombre;
+	this.titular = titular;
+}
+ 
+ public Materias(Set<Estudiante>colecciondeEstudiantes1) {
+		this.colecciondeEstudiantes1 = colecciondeEstudiantes1;
+	}
+
+	public void cargarMaterias(Estudiante estudiante) {
+		colecciondeEstudiantes1.add(estudiante);
+		System.out.println(estudiante.toString()+" fue cargada correctamente.");
+	}
+	
+	public void listarPersonas() {
+		System.out.println("LISTADO DE Estudiantes:");	
+		for (Estudiante estudiante : colecciondeEstudiantes1) {
+			System.out.println(estudiante.toString());			
+		}
+	}
+	
+	public void eliminarPersona(String nombre) {
+		
+				Iterator<Estudiante> iterador = colecciondeEstudiantes1.iterator();
+				
+				while(iterador.hasNext()) {
+					String buscado = iterador.next().getNombre();
+					if(buscado.equals(nombre)) {
+						iterador.remove();
+						System.out.println(nombre + " fue eliminada.");
+					}
+				}
+	}
+
+	@Override
+	public String toString() {
+		return "Materias [nombre=" + nombre + ", titular=" + titular + ", colecciondeEstudiantes1="
+				+ colecciondeEstudiantes1 + "]";
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Profesor getTitular() {
+		return titular;
+	}
+
+	public void setTitular(Profesor titular) {
+		this.titular = titular;
+	}
+
+	@Override
+	public int verCantidad() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String listarContenidos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+ 
+}
