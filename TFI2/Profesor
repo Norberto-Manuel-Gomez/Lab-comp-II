@@ -1,0 +1,35 @@
+package TFI02;
+
+public class Profesor extends Persona {
+private double basico;
+private int antuguedad;
+
+public Profesor(double basico, int antuguedad,String nombre,String apellido,int legajo) {
+	
+	super.setNombre(nombre);
+	super.setApellido(apellido);
+	super.setLegajo(legajo);
+	this.basico = basico;
+	this.antuguedad = antuguedad;
+}
+public void calcularsueldo(){
+	
+}
+public double getBasico() {
+	return basico;
+}
+public void setBasico(double basico) {
+	this.basico = basico;
+}
+public int getAntuguedad() {
+	return antuguedad;
+}
+public void setAntuguedad(int antuguedad) {
+	this.antuguedad = antuguedad;
+}
+@Override
+public String toString() {
+	return "Profesor [Nombre " + getNombre() +"Apellido"+ getApellido()+"Leajo"+getLegajo()+ "basico=" + basico + ", antuguedad=" + antuguedad + "]";
+}
+
+}
