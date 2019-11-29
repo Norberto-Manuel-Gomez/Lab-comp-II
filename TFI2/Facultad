@@ -1,0 +1,86 @@
+package TFI02;
+
+import java.util.Iterator;
+import java.util.Set;
+
+public class Facultad implements Informacion {
+	
+private String nombre;
+
+Set<Carrera> colecciondeCarrera;
+public Facultad(String nombre, Set<Carrera> colecciondeCarrera) {
+	super();
+	this.nombre = nombre;
+	this.colecciondeCarrera = colecciondeCarrera;
+}
+
+public Facultad(Set<Carrera> colecciondeCarrera) {
+		this.colecciondeCarrera = colecciondeCarrera;
+	}
+
+	public void colecciondeCarrera(Carrera carrera) {
+		colecciondeCarrera.add(carrera);
+		System.out.println(carrera.toString()+" fue cargada correctamente.");
+	}
+	
+	 public void eliminarCarrera(String nombre) {
+	        Iterator<Carrera> iterator = Carrera.iterator();
+
+	        while(iterator.hasNext()) {
+	            if (iterator.next().getNombre().equals(nombre)) {
+	                iterator.remove();
+	            }
+	        }
+	    }
+	
+
+	public void eliminarPersona(String nombre) {
+			
+					Iterator<Carrera> iterador = Carrera.iterator();
+					
+					while(iterador.hasNext()) {
+						String buscado = iterador.next().getNombre();
+						if(buscado.equals(nombre)) {
+							iterador.remove();
+							System.out.println(nombre + " fue eliminada.");
+						}
+					}
+		}
+	
+	 public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Set<Carrera> getColecciondeCarrera() {
+		return colecciondeCarrera;
+	}
+
+	public void setColecciondeCarrera(Set<Carrera> colecciondeCarrera) {
+		this.colecciondeCarrera = colecciondeCarrera;
+	}
+
+	@Override
+	public String toString() {
+		return "Facultad [nombre=" + nombre + ", colecciondeCarrera=" + colecciondeCarrera + ", getNombre()="
+				+ getNombre() + ", getColecciondeCarrera()=" + getColecciondeCarrera() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
+
+	@Override
+	public int verCantidad() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String listarContenidos() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}
