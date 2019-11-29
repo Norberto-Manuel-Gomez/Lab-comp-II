@@ -12,6 +12,10 @@ public Profesor(double basico, int antuguedad,String nombre,String apellido,int 
 	this.basico = basico;
 	this.antuguedad = antuguedad;
 }
+public double Calcularsueldo() {
+    return this.basico+(this.basico/10)*antuguedad;
+}
+
 public void calcularsueldo(){
 	
 }
