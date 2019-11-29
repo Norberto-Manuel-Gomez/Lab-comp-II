@@ -1,0 +1,82 @@
+package TFI02;
+
+
+import java.util.Iterator;
+import java.util.Set;
+
+
+public class Carrera implements Informacion{
+ private String nombre;
+ Set<Materias> colecciondeMaterias;
+ public Carrera(String nombre, Materias[] colecciondeMaterias) {
+	super();
+	this.nombre = nombre;
+	
+ }
+	
+	
+	public Carrera (Set<Materias> colecciondeMaterias) {
+		this.colecciondeMaterias = colecciondeMaterias;
+	}
+
+	public void cargarCarrera(Materias materia) {
+		colecciondeMaterias.add(materia);
+		System.out.println(materia.toString()+" fue cargada correctamente.");
+	}
+	
+	public void listarMaterias() {
+		System.out.println("LISTADO DE Carreras:");	
+		for (Materias carrera : colecciondeMaterias) {
+			System.out.println(carrera.toString());			
+		}
+	}
+public void buscarPersona(String nombre) {
+		
+		for (Materias materia : colecciondeMaterias) {
+		
+			if(materia.getNombre().equals(nombre)) {
+				System.out.println(materia.toString() + " fue encontrado.");
+			}
+		}
+		
+	}
+
+
+public String getNombre() {
+	return nombre;
+}
+
+
+public void setNombre(String nombre) {
+	this.nombre = nombre;
+}
+
+
+@Override
+public String toString() {
+	return "Carrera [nombre=" + nombre + ", colecciondeMaterias=" + colecciondeMaterias + ""
+			+ ", getNombre()=" + getNombre()+ "]";
+}
+
+
+public static Iterator<Carrera> iterator() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+
+@Override
+public int verCantidad() {
+	// TODO Auto-generated method stub
+	return 0;
+}
+
+
+@Override
+public String listarContenidos() {
+	// TODO Auto-generated method stub
+	return null;
+}
+	
+	
+}
