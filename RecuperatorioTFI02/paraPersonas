@@ -1,0 +1,10 @@
+package RecuperatorioTFI02;
+
+public interface paraPersonas {
+   
+    String verNombre();
+    public void cambiarnombre(String nombre);
+    public void modificarDNI (int nroDNI);
+}
+
+
