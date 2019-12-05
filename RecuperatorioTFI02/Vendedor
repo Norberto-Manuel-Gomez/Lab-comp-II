@@ -1,0 +1,85 @@
+package RecuperatorioTFI02;
+
+public class Vendedor implements paraPersonas {
+	private String nombre;
+	private static int cantidadDeVentas;
+	private int dni;
+	
+	
+	
+	
+	public static int  verCantidadDeVentas() {
+		
+		System.out.println(getCantidadDeVentas()+" Fueron las ventas.");
+		
+		return 0;
+	}
+	
+	
+	
+	
+	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public static int getCantidadDeVentas() {
+		cantidadDeVentas++;
+		return cantidadDeVentas;
+	}
+	public void setCantidadDeVentas(int cantidadDeVentas) {
+		this.cantidadDeVentas = cantidadDeVentas;
+	}
+	public int getDni() {
+		return dni;
+	}
+	public void setDni(int dni) {
+		this.dni = dni;
+	}
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "Vendedor [nombre=" + nombre + ", cantidadDeVentas=" + cantidadDeVentas + ", dni=" + dni + "]";
+	}
+
+
+
+
+
+	@Override
+	public String verNombre() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+
+	@Override
+	public void cambiarnombre(String nombre) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+
+	@Override
+	public void modificarDNI(int nroDNI) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+}
