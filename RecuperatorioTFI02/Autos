@@ -1,0 +1,73 @@
+package RecuperatorioTFI02;
+
+import java.util.Scanner;
+
+public class Autos {
+private int cantidadPuertas;
+private String tipoDeVelocidades;
+private String marca;
+private int modelo;
+private double precio;
+private int kilometraje;
+private String codigo;
+ public void mover (int cantKilometros){
+	 Scanner teclado = new Scanner(System.in);
+	 System.out.println("Cantidad de kilometros recorridos");
+	 int recorrido = teclado.nextInt();
+	 cantKilometros = cantKilometros + recorrido;
+ }
+  
+public int getCantidadPuertas() {
+	return cantidadPuertas;
+}
+public void setCantidadPuertas(int cantidadPuertas) {
+	this.cantidadPuertas = cantidadPuertas;
+}
+public String getTipoDeVelocidades() {
+	return tipoDeVelocidades;
+}
+public void setTipoDeVelocidades(String tipoDeVelocidades) {
+	this.tipoDeVelocidades = tipoDeVelocidades;
+}
+public String getMarca() {
+	return marca;
+}
+public void setMarca(String marca) {
+	this.marca = marca;
+}
+public int getModelo() {
+	return modelo;
+}
+public void setModelo(int modelo) {
+	this.modelo = modelo;
+}
+public double getPrecio() {
+	return precio;
+}
+public void setPrecio(double precio) {
+	this.precio = precio;
+}
+public int getKilometraje() {
+	return kilometraje;
+}
+public void setKilometraje(int kilometraje) {
+	this.kilometraje = kilometraje;
+}
+
+@Override
+public String toString() {
+	return "Autos [cantidadPuertas=" + cantidadPuertas + ", tipoDeVelocidades=" + tipoDeVelocidades + ", marca=" + marca
+			+ ", modelo=" + modelo + ", precio=" + precio + ", kilometraje=" + kilometraje + ", codigo=" + codigo + "]";
+}
+
+public String getCodigo() {
+	return codigo;
+}
+
+public void setCodigo(String codigo) {
+	this.codigo = codigo;
+}
+
+
+ 
+}
