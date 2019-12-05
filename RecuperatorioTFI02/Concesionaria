@@ -1,0 +1,126 @@
+package RecuperatorioTFI02;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+import TFI02.Materias;
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+
+public class Concesionaria {
+private String nombre;
+private String direccion;
+TreeSet<Vendedor> coleccionDeVendedores;
+Set<Autos> coleccionDeAutos;
+private Autos autosvendidos;
+int i = 1;
+Scanner teclado = new Scanner(System.in);
+public Concesionaria (TreeSet<Vendedor> coleccionDeVendedores) {
+	this.coleccionDeVendedores = coleccionDeVendedores;
+}
+public Concesionaria (Set<Autos> coleccionDeAutos) {
+	this.coleccionDeAutos = coleccionDeAutos;
+}
+
+
+public void ListarVendedor() {
+	System.out.println("LISTADO DE Vendedores:");
+	
+	for (Vendedor vendedor : coleccionDeVendedores) {
+		System.out.println(i++ + vendedor.toString());			
+	}
+}
+
+public boolean eliminarVendedor(String nombrevendedor) {
+
+			Iterator<Vendedor> iterador = coleccionDeVendedores.iterator();
+			
+			while(iterador.hasNext()) {
+				String buscado = iterador.next().getNombre();
+				if(buscado.equals(nombre)) {
+					iterador.remove();
+					System.out.println(nombre + " fue eliminada.");
+					return true;
+				}
+			}
+			return false;
+}
+public void ListarAutos() {
+	System.out.println("LISTADO DE Autos:");	
+	for (Autos autos : coleccionDeAutos) {
+		System.out.println(autos.toString());			
+	}
+}
+public void vender(Vendedor vendedor,Autos auto ){
+		
+	Vendedor.verCantidadDeVentas();
+}
+public void eliminarAuto(String codigo) {
+		
+				Iterator<Autos> iterador = coleccionDeAutos.iterator();
+				
+				while(iterador.hasNext()) {
+					String buscado = iterador.next().getCodigo();
+					if(buscado.equals(codigo)) {
+						iterador.remove();
+						System.out.println(codigo + " fue eliminada.");
+					}
+				}
+	}
+
+
+ public void incorporarVendedor(Vendedor vendedor) {
+
+		
+	coleccionDeVendedores.add(vendedor);
+	System.out.println(vendedor.toString()+" fue cargada correctamente.");
+}
+public void comprarAuto(Autos auto){
+	 
+		coleccionDeAutos.add(auto);
+		System.out.println(Autos.toString()+" fue cargada correctamente.");
+	}
+	
+}
+public String getNombre() {
+	return nombre;
+}
+public void setNombre(String nombre) {
+	this.nombre = nombre;
+}
+public String getDireccion() {
+	return direccion;
+}
+public void setDireccion(String direccion) {
+	this.direccion = direccion;
+}
+public Set<Vendedor> getColeccionDeVendedores() {
+	return coleccionDeVendedores;
+}
+public void setColeccionDeVendedores(Set<Vendedor> coleccionDeVendedores) {
+	this.coleccionDeVendedores = coleccionDeVendedores;
+}
+public Set<Autos> getColeccionDeAutos() {
+	return coleccionDeAutos;
+}
+public void setColeccionDeAutos(Set<Autos> coleccionDeAutos) {
+	this.coleccionDeAutos = coleccionDeAutos;
+}
+public Autos getAutosvendidos() {
+	return autosvendidos;
+}
+public void setAutosvendidos(Autos autosvendidos) {
+	this.autosvendidos = autosvendidos;
+}
+@Override
+public String toString() {
+	return "Concesionaria [nombre=" + nombre + ", direccion=" + direccion + ", coleccionDeVendedores="
+			+ coleccionDeVendedores + ", coleccionDeAutos=" + coleccionDeAutos + ", autosvendidos=" + autosvendidos
+			+ ", getNombre()=" + getNombre() + ", getDireccion()=" + getDireccion() + ", getColeccionDeVendedores()="
+			+ getColeccionDeVendedores() + ", getColeccionDeAutos()=" + getColeccionDeAutos() + ", getAutosvendidos()="
+			+ getAutosvendidos() + "]";
+}
+
+}
